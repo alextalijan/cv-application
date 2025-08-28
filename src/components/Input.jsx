@@ -1,4 +1,4 @@
-function Input({ label, type}) {
+function Input({ label, type = "text"}) {
   return (
     <div>
       <label>
