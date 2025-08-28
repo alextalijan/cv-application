@@ -1,18 +1,18 @@
 import Input from "./Input.jsx";
 
-function Job() {
+function Job({ companyName, position, responsibilities, fromDate, toDate}) {
   return (
     <div>
-      <Input label="Company Name" />
-      <Input label="Position Title" />
+      <Input label="Company Name" value={companyName} />
+      <Input label="Position Title" value={position} />
       <div>
       <label>
         Main responsibilities
-        <textarea></textarea>
+        <textarea>{responsibilities}</textarea>
       </label>
       </div>
-      <Input label="Worked From" type="date" />
-      <Input label="Worked Until" type="date" />
+      <Input label="Worked From" type="date" value={fromDate} />
+      <Input label="Worked Until" type="date" value={toDate} />
     </div>
   )
 }
