@@ -1,6 +1,6 @@
 import Input from './Input.jsx';
 
-function EducationalSection(schoolInfo) {
+function EducationalSection({schoolInfo}) {
   return (
     <div>
       <h2 className='section-heading'>Education</h2>

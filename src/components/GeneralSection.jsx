@@ -1,6 +1,6 @@
 import Input from './Input.jsx';
 
-function GeneralSection(info) {
+function GeneralSection({info}) {
   return (
     <div>
       <h2 className='section-heading'>General Info</h2>
