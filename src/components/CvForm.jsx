@@ -1,6 +1,6 @@
-import GeneralSection from './components/GeneralSection.jsx';
-import EducationalSection from './components/EducationalSection.jsx';
-import ExperienceSection from './components/ExperienceSection.jsx';
+import GeneralSection from './GeneralSection.jsx';
+import EducationalSection from './EducationalSection.jsx';
+import ExperienceSection from './ExperienceSection.jsx';
 
 function CvForm() {
   function handleSubmit(event) {

@@ -16,7 +16,7 @@ function ExperienceSection() {
         <Job key={job.id} companyName={job.companyName} position={job.position} responsibilities={job.responsibilities} fromDate={job.fromDate}  toDate={job.toDate} handleDelete={() => deleteJob(job.id)} />
       )
      })}
-     <button className='add-job-btn' onClick={() => setJobs([...jobs, { id: crypto.randomUUID(), companyName: '', position: '', responsibilities: '', fromDate: '', toDate: '' }])}>Add Job</button>
+     <button className='add-job-btn' type='button' onClick={() => setJobs([...jobs, { id: crypto.randomUUID(), companyName: '', position: '', responsibilities: '', fromDate: '', toDate: '' }])}>Add Job</button>
     </div>
   );
 }
