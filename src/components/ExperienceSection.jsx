@@ -1,22 +1,15 @@
 import Job from './Job.jsx';
-import { useState } from 'react';
 
-function ExperienceSection() {
-  const [jobs, setJobs] = useState([]);
-
-  function deleteJob(jobId) {
-    setJobs(jobs.filter(job => job.id !== jobId));
-  }
-
+function ExperienceSection({ jobs, addJob, deleteJob }) {
   return (
     <div className='jobsList'>
      <h2 className='section-heading'>Experience</h2>
      {jobs.map((job) => {
       return (
-        <Job key={job.id} companyName={job.companyName} position={job.position} responsibilities={job.responsibilities} fromDate={job.fromDate}  toDate={job.toDate} handleDelete={() => deleteJob(job.id)} />
+        <Job key={job.id} id={job.id} company={job.company} position={job.position} responsibilities={job.responsibilities} fromDate={job.fromDate} toDate={job.toDate} handleDelete={() => deleteJob(job.id)} />
       )
      })}
-     <button className='add-job-btn' type='button' onClick={() => setJobs([...jobs, { id: crypto.randomUUID(), companyName: '', position: '', responsibilities: '', fromDate: '', toDate: '' }])}>Add Job</button>
+     <button className='add-job-btn' type='button' onClick={addJob}>Add Job</button>
     </div>
   );
 }

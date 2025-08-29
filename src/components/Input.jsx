@@ -1,8 +1,8 @@
-function Input({ label, type = "text"}) {
+function Input({ label, name, value, type = "text"}) {
   return (
     <div className="form-input">
       <label className="input-label">{label}</label>
-      <input type={type} className="input-field" />
+      <input name={name} type={type} value={value} className="input-field" />
     </div>
   )
 }
