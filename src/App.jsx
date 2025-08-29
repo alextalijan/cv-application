@@ -5,9 +5,14 @@ import ExperienceSection from './components/ExperienceSection.jsx';
 function App() {
   return (
     <>
-      <GeneralSection />
-      <EducationalSection />
-      <ExperienceSection />
+      <h1 className='h1'>CV Builder</h1>
+      <div className='cv-paper'>
+        <GeneralSection className="section" />
+        <hr className='section-break' />
+        <EducationalSection className="section"/>
+        <hr className='section-break' />
+        <ExperienceSection className="section" />
+      </div>
     </>
   )
 }

@@ -8,3 +8,65 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.h1 {
+  text-align: center;
+  font-size: 4rem;
+  margin-top: 4rem;
+  margin-bottom: 5rem;
+}
+
+.cv-paper {
+  border: 1px solid black;
+  width: 800px;
+  margin: 0 auto 4rem;
+  padding: 4rem 5rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 
+    0 2px 5px rgba(0, 0, 0, 0.1),   /* soft overall shadow */
+    0 10px 20px rgba(0, 0, 0, 0.1); /* deeper lift */
+  background-image: url(../assets/paper-texture.jpg);
+  background-size: contain;
+  border-radius: 3px;
+}
+
+.section {
+  display: none;
+}
+
+.section-heading {
+  font-size: 3rem;
+  text-align: center;
+  margin: 0 0rem 4rem 0rem;
+}
+
+.section-inputs {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 0.8rem;
+}
+
+.form-input {
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-column: 1 / -1;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.5rem;
+}
+
+.input-label {
+  font-size: 1.5rem;
+}
+
+.input-field {
+  padding: 0.2rem 0.5rem;
+  font-size: 1.5rem;
+}
+
+.section-break {
+  border: none;       /* remove default border if you want */
+  border-top: 2px solid black; /* the visible line */
+  margin: 3.5rem 0;     /* spacing works correctly */
+  height: 0;          /* usually fine */
+}
