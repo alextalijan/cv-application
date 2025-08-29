@@ -1,13 +1,14 @@
 import Input from "./Input.jsx";
 
-function Job({ companyName, position, responsibilities, fromDate, toDate}) {
+function Job({ companyName, position, responsibilities, fromDate, toDate, handleDelete}) {
   return (
-    <div>
+    <div className="job-section">
+      <button className="delete-job-btn" type="button" onClick={handleDelete}>Delete</button>
       <Input label="Company Name" value={companyName} />
       <Input label="Position Title" value={position} />
-      <div>
+      <div className="jobResponsibilities-section">
       <label>
-        Main responsibilities
+        Main Responsibilities:
         <textarea>{responsibilities}</textarea>
       </label>
       </div>

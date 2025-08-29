@@ -70,3 +70,69 @@ body {
   margin: 3.5rem 0;     /* spacing works correctly */
   height: 0;          /* usually fine */
 }
+
+.jobsList {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.job-section {
+  padding: 4rem 2rem;
+  background-color: rgb(170, 170, 170);
+  border-radius: 1rem;
+  color: rgb(26, 26, 26);
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  row-gap: 2rem;
+  position: relative;
+}
+
+.delete-job-btn {
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  font-size: 1.2rem;
+  padding: 0.3rem;
+  border-radius: 0.5rem;
+  background-color: #e53935;
+  color: #f5f5f5;
+  transition: background-color 0.5s;
+}
+
+.delete-job-btn:hover {
+  background-color: #c62828;
+  cursor: pointer;
+}
+
+.jobResponsibilities-section {
+  grid-column: 1 / -1;
+}
+
+.jobResponsibilities-section > label {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-size: 1.5rem;
+}
+
+.jobResponsibilities-section textarea {
+  resize: none;
+  width: 100%;
+  height: 50px;
+  padding: 0.5rem;
+}
+
+.add-job-btn {
+  align-self: center;
+  font-size: 1.5rem;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  background-color: aqua;
+  transition: background-color 0.4s ease;
+}
+
+.add-job-btn:hover {
+  background-color: aquamarine;
+  cursor: pointer;
+}
