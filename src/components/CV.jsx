@@ -1,7 +1,7 @@
-function CV({ info }) {
+function CV({ info, toggleEditMode }) {
   return (
     <div className="finished-cv">
-      <button className="edit-cv-btn">EDIT</button>
+      <button className="edit-cv-btn" onClick={toggleEditMode} type="button">EDIT</button>
       <section className="finished-cv-section">
         <h2>General</h2>
         <p>Name: {info.name || 'Not known'}</p>
