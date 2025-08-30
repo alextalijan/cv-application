@@ -1,13 +1,46 @@
-import Input from './Input.jsx';
-
-function GeneralSection({info}) {
+function GeneralSection({ info, handleChange }) {
   return (
     <div>
-      <h2 className='section-heading'>General Info</h2>
+      <h2 className='section-heading'>General</h2>
       <div className="section-inputs">
-        <Input name="name" label="Name" value={info.name} />
-        <Input name="email" label="Email" type="email" value={info.email} />
-        <Input name="phone" label="Phone Number" type="tel" value={info.phone} />
+        <div className="form-input">
+          <label className="input-label">
+            Name
+            <input
+              name="name"
+              type="text"
+              className="input-field"
+              value={info.name}
+              onChange={e => handleChange("name", e.target.value)}
+            />
+          </label>
+        </div>
+
+        <div className="form-input">
+          <label className="input-label">
+            Email
+            <input
+              name="email"
+              type="email"
+              className="input-field"
+              value={info.email}
+              onChange={e => handleChange("email", e.target.value)}
+            />
+          </label>
+        </div>
+
+        <div className="form-input">
+          <label className="input-label">
+            Phone Number
+            <input
+              name="phone"
+              type="tel"
+              className="input-field"
+              value={info.phone}
+              onChange={e => handleChange("phone", e.target.value)}
+            />
+          </label>
+        </div>
       </div>
     </div>
   );

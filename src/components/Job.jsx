@@ -1,21 +1,75 @@
-import Input from "./Input.jsx";
-
-function Job({ id, company, position, responsibilities, fromDate, toDate, handleDelete}) {
+function Job({ id, company, position, responsibilities, fromDate, toDate, handleDelete, handleJobChange }) {
   return (
     <div className="job-section">
-      <button className="delete-job-btn" type="button" onClick={handleDelete}>Delete</button>
-      <Input name={`company${id}`} label="Company Name" value={company} />
-      <Input name={`position${id}`} label="Position Title" value={position} />
-      <div className="jobResponsibilities-section">
-      <label>
-        Main Responsibilities:
-        <textarea name={`responsibilities${id}`} rows="3">{responsibilities}</textarea>
-      </label>
+      <button className="delete-job-btn" type="button" onClick={handleDelete}>
+        Delete
+      </button>
+
+      <div className="form-input">
+        <label className="input-label">
+          Company Name
+          <input
+            name={`company${id}`}
+            type="text"
+            className="input-field"
+            value={company}
+            onChange={e => handleJobChange(id, "company", e.target.value)}
+          />
+        </label>
       </div>
-      <Input name={`workedFrom${id}`} label="Worked From" type="date" value={fromDate} />
-      <Input name={`workedUntil${id}`} label="Worked Until" type="date" value={toDate} />
+
+      <div className="form-input">
+        <label className="input-label">
+          Position Title
+          <input
+            name={`position${id}`}
+            type="text"
+            className="input-field"
+            value={position}
+            onChange={e => handleJobChange(id, "position", e.target.value)}
+          />
+        </label>
+      </div>
+
+      <div className="jobResponsibilities-section">
+        <label>
+          Main Responsibilities:
+          <textarea
+            name={`responsibilities${id}`}
+            rows="3"
+            value={responsibilities}
+            onChange={e => handleJobChange(id, "responsibilities", e.target.value)}
+          />
+        </label>
+      </div>
+
+      <div className="form-input">
+        <label className="input-label">
+          Worked From
+          <input
+            name={`workedFrom${id}`}
+            type="date"
+            className="input-field"
+            value={fromDate}
+            onChange={e => handleJobChange(id, "fromDate", e.target.value)}
+          />
+        </label>
+      </div>
+
+      <div className="form-input">
+        <label className="input-label">
+          Worked Until
+          <input
+            name={`workedUntil${id}`}
+            type="date"
+            className="input-field"
+            value={toDate}
+            onChange={e => handleJobChange(id, "toDate", e.target.value)}
+          />
+        </label>
+      </div>
     </div>
-  )
+  );
 }
 
 export default Job;
