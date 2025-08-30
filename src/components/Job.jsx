@@ -9,7 +9,7 @@ function Job({ id, company, position, responsibilities, fromDate, toDate, handle
         <label className="input-label">
           Company Name
           <input
-            name={`company${id}`}
+            name={'company'}
             type="text"
             className="input-field"
             value={company}
@@ -22,7 +22,7 @@ function Job({ id, company, position, responsibilities, fromDate, toDate, handle
         <label className="input-label">
           Position Title
           <input
-            name={`position${id}`}
+            name={'position'}
             type="text"
             className="input-field"
             value={position}
@@ -35,7 +35,7 @@ function Job({ id, company, position, responsibilities, fromDate, toDate, handle
         <label>
           Main Responsibilities:
           <textarea
-            name={`responsibilities${id}`}
+            name={'responsibilities'}
             rows="3"
             value={responsibilities}
             onChange={e => handleJobChange(id, "responsibilities", e.target.value)}
@@ -47,7 +47,7 @@ function Job({ id, company, position, responsibilities, fromDate, toDate, handle
         <label className="input-label">
           Worked From
           <input
-            name={`workedFrom${id}`}
+            name={'workedFrom'}
             type="date"
             className="input-field"
             value={fromDate}
@@ -60,7 +60,7 @@ function Job({ id, company, position, responsibilities, fromDate, toDate, handle
         <label className="input-label">
           Worked Until
           <input
-            name={`workedUntil${id}`}
+            name={'workedUntil'}
             type="date"
             className="input-field"
             value={toDate}
