@@ -76,6 +76,16 @@ body {
   opacity: 0.5;
 }
 
+.input-error {
+  border-color: #ef4444; /* red-500 */
+  background-color: #fee2e2; /* red-100 */
+}
+
+.input-error::placeholder {
+  color: #ef4444; /* red-500 */
+  font-size: 1.3rem;
+}
+
 .section-break {
   border: none;       /* remove default border if you want */
   border-top: 2px solid black; /* the visible line */

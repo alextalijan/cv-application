@@ -9,6 +9,7 @@ function Job({ id, company, position, responsibilities, fromDate, toDate, handle
         <label className="input-label">
           Company Name<span aria-label="required" className="grid-ignore">*</span>
           <input
+            data-id={id}
             name={'company'}
             type="text"
             className="input-field"
@@ -23,6 +24,7 @@ function Job({ id, company, position, responsibilities, fromDate, toDate, handle
         <label className="input-label">
           Position Title
           <input
+            data-id={id}
             name={'position'}
             type="text"
             className="input-field"
@@ -37,6 +39,8 @@ function Job({ id, company, position, responsibilities, fromDate, toDate, handle
         <label>
           Main Responsibilities<span aria-label="required" className="grid-ignore">*</span>: 
           <textarea
+            data-id={id}
+            className="input-field"
             name={'responsibilities'}
             rows="3"
             value={responsibilities}
@@ -50,6 +54,7 @@ function Job({ id, company, position, responsibilities, fromDate, toDate, handle
         <label className="input-label">
           Worked From
           <input
+            data-id={id}
             name={'workedFrom'}
             type="date"
             className="input-field"
@@ -63,6 +68,7 @@ function Job({ id, company, position, responsibilities, fromDate, toDate, handle
         <label className="input-label">
           Worked Until
           <input
+            data-id={id}
             name={'workedUntil'}
             type="date"
             className="input-field"
