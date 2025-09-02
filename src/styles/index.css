@@ -73,7 +73,7 @@ body {
 
 .input-field {
   padding: 0.2rem 0.5rem;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 .input-field::placeholder {
@@ -87,7 +87,6 @@ body {
 
 .input-error::placeholder {
   color: #ef4444; /* red-500 */
-  font-size: 1.3rem;
 }
 
 .section-break {
@@ -109,7 +108,7 @@ body {
   border-radius: 1rem;
   color: rgb(26, 26, 26);
   display: grid;
-  grid-template-columns: max-content 1fr;
+  grid-template-columns: 200px 1fr;
   row-gap: 2rem;
   position: relative;
 }
@@ -142,14 +141,13 @@ body {
   font-size: 1.5rem;
 }
 
-.jobResponsibilities-section textarea {
+.responsibilities-input {
   resize: none;
   width: 100%;
   padding: 0.5rem;
-  font-size: 1rem;
 }
 
-.jobResponsibilities-section textarea::placeholder {
+.responsibilities-input::placeholder {
   opacity: 0.5;
 }
 
