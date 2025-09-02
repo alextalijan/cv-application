@@ -29,7 +29,7 @@ function CV({ info, toggleEditMode }) {
                   <h3><i>{job.company || "Some Company"}</i></h3>
                   <p>Position (Title): <b>{job.position || "Not defined"}</b></p>
                   <p>Responsibilities: <b>{job.responsibilities || "Unknown"}</b></p>
-                  <p>Worked from <b>{job.fromDate || "some date"}</b> to <b>{job.toDate || "some other date"}</b>.</p>
+                  <p>Worked from <b>{job.workedFrom || "some date"}</b> to <b>{job.workedUntil || "some other date"}</b>.</p>
                 </div>
               );
             })

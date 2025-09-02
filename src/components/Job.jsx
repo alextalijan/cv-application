@@ -1,4 +1,4 @@
-function Job({ id, company, position, responsibilities, fromDate, toDate, handleDelete, handleJobChange }) {
+function Job({ id, company, position, responsibilities, workedFrom, workedUntil, handleDelete, handleJobChange }) {
   return (
     <div className="job-section">
       <button className="delete-job-btn" type="button" onClick={handleDelete}>
@@ -59,8 +59,8 @@ function Job({ id, company, position, responsibilities, fromDate, toDate, handle
           name={'workedFrom'}
           type="date"
           className="input-field"
-          value={fromDate}
-          onChange={e => handleJobChange(id, "fromDate", e.target.value)}
+          value={workedFrom}
+          onChange={e => handleJobChange(id, "workedFrom", e.target.value)}
         />
       </div>
 
@@ -73,8 +73,8 @@ function Job({ id, company, position, responsibilities, fromDate, toDate, handle
           name={'workedUntil'}
           type="date"
           className="input-field"
-          value={toDate}
-          onChange={e => handleJobChange(id, "toDate", e.target.value)}
+          value={workedUntil}
+          onChange={e => handleJobChange(id, "workedUntil", e.target.value)}
         />
       </div>
     </div>

@@ -99,7 +99,7 @@ function CvForm() {
   }
 
   function addJob() {
-    setInfo({ ...info, jobs: [...info.jobs, { id: crypto.randomUUID(), company: '', position: '', responsibilities: '', fromDate: '', toDate: '' }] });
+    setInfo({ ...info, jobs: [...info.jobs, { id: crypto.randomUUID(), company: '', position: '', responsibilities: '', workedFrom: '', workedUntil: '' }] });
   }
 
   function deleteJob(id) {
