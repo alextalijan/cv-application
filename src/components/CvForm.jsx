@@ -41,7 +41,7 @@ function CvForm() {
     let errors = 0;
 
     if (info.name === '') {
-      showError('name', 'Please input the name.');
+      showError('name', 'Please input your name.');
       errors += 1;
     }
     
