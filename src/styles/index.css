@@ -38,7 +38,11 @@ body {
 .section-heading {
   font-size: 3rem;
   text-align: center;
-  margin: 0 0rem 4rem 0rem;
+  margin-bottom: 4rem;
+}
+
+.cv-paper > .jobs-list:last-child > .section-heading {
+  margin-bottom: 1rem;
 }
 
 .section-inputs {
@@ -156,6 +160,7 @@ body {
   border-radius: 1rem;
   background-color: aqua;
   transition: background-color 0.4s ease;
+  position: relative;
 }
 
 .add-job-btn:hover {
