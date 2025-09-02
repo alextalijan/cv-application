@@ -6,40 +6,40 @@ function GeneralSection({ info, handleChange }) {
         <div className="form-input">
           <label className="input-label">
             Name
-            <input
-              name="name"
-              type="text"
-              className="input-field"
-              value={info.name}
-              onChange={e => handleChange("name", e.target.value)}
-            />
           </label>
+          <input
+            name="name"
+            type="text"
+            className="input-field"
+            value={info.name}
+            onChange={e => handleChange("name", e.target.value)}
+          />
         </div>
 
         <div className="form-input">
           <label className="input-label">
             Email
-            <input
-              name="email"
-              type="email"
-              className="input-field"
-              value={info.email}
-              onChange={e => handleChange("email", e.target.value)}
-            />
           </label>
+          <input
+            name="email"
+            type="email"
+            className="input-field"
+            value={info.email}
+            onChange={e => handleChange("email", e.target.value)}
+          />
         </div>
 
         <div className="form-input">
           <label className="input-label">
             Phone Number
-            <input
-              name="phone"
-              type="tel"
-              className="input-field"
-              value={info.phone}
-              onChange={e => handleChange("phone", e.target.value)}
-            />
           </label>
+          <input
+            name="phone"
+            type="tel"
+            className="input-field"
+            value={info.phone}
+            onChange={e => handleChange("phone", e.target.value)}
+          />
         </div>
       </div>
     </div>

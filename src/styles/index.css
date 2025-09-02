@@ -57,6 +57,9 @@ body {
 
 .input-label {
   font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
 }
 
 .input-field {
@@ -120,6 +123,7 @@ body {
   resize: none;
   width: 100%;
   padding: 0.5rem;
+  font-size: 1rem;
 }
 
 .add-job-btn {
