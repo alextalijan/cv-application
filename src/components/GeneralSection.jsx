@@ -5,7 +5,7 @@ function GeneralSection({ info, handleChange }) {
       <div className="section-inputs">
         <div className="form-input">
           <label className="input-label">
-            Name
+            Name<span aria-label="required" className="grid-ignore">*</span>
           </label>
           <input
             name="name"
@@ -13,12 +13,13 @@ function GeneralSection({ info, handleChange }) {
             className="input-field"
             value={info.name}
             onChange={e => handleChange("name", e.target.value)}
+            placeholder="e.g. John Doe"
           />
         </div>
 
         <div className="form-input">
           <label className="input-label">
-            Email
+            Email<span aria-label="required" className="grid-ignore">*</span>
           </label>
           <input
             name="email"
@@ -26,6 +27,7 @@ function GeneralSection({ info, handleChange }) {
             className="input-field"
             value={info.email}
             onChange={e => handleChange("email", e.target.value)}
+            placeholder="john.doe@example.com"
           />
         </div>
 
@@ -39,6 +41,7 @@ function GeneralSection({ info, handleChange }) {
             className="input-field"
             value={info.phone}
             onChange={e => handleChange("phone", e.target.value)}
+            placeholder="+3009008010"
           />
         </div>
       </div>

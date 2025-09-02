@@ -7,13 +7,14 @@ function Job({ id, company, position, responsibilities, fromDate, toDate, handle
 
       <div className="form-input">
         <label className="input-label">
-          Company Name
+          Company Name<span aria-label="required" className="grid-ignore">*</span>
           <input
             name={'company'}
             type="text"
             className="input-field"
             value={company}
             onChange={e => handleJobChange(id, "company", e.target.value)}
+            placeholder="e.g. Microsoft"
           />
         </label>
       </div>
@@ -27,18 +28,20 @@ function Job({ id, company, position, responsibilities, fromDate, toDate, handle
             className="input-field"
             value={position}
             onChange={e => handleJobChange(id, "position", e.target.value)}
+            placeholder="Marketing Manager"
           />
         </label>
       </div>
 
       <div className="jobResponsibilities-section">
         <label>
-          Main Responsibilities:
+          Main Responsibilities<span aria-label="required" className="grid-ignore">*</span>: 
           <textarea
             name={'responsibilities'}
             rows="3"
             value={responsibilities}
             onChange={e => handleJobChange(id, "responsibilities", e.target.value)}
+            placeholder="Market research, handled people and assigned work to them."
           />
         </label>
       </div>

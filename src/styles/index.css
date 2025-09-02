@@ -63,9 +63,17 @@ body {
   gap: 1.5rem;
 }
 
+.grid-ignore {
+  display: contents;
+}
+
 .input-field {
   padding: 0.2rem 0.5rem;
   font-size: 1.5rem;
+}
+
+.input-field::placeholder {
+  opacity: 0.5;
 }
 
 .section-break {
@@ -125,6 +133,10 @@ body {
   width: 100%;
   padding: 0.5rem;
   font-size: 1rem;
+}
+
+.jobResponsibilities-section textarea::placeholder {
+  opacity: 0.5;
 }
 
 .add-job-btn {

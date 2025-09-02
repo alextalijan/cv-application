@@ -5,7 +5,7 @@ function EducationalSection({ schoolInfo, handleChange }) {
       <div className="section-inputs">
         <div className="form-input">
           <label className="input-label">
-            School Name
+            School Name<span aria-label="required" className="grid-ignore">*</span>
           </label>
           <input
             name="school"
@@ -13,6 +13,7 @@ function EducationalSection({ schoolInfo, handleChange }) {
             className="input-field"
             value={schoolInfo.school}
             onChange={e => handleChange("school", e.target.value)}
+            placeholder="Harvard Law School"
           />
         </div>
 
@@ -26,12 +27,13 @@ function EducationalSection({ schoolInfo, handleChange }) {
             className="input-field"
             value={schoolInfo.studyTitle}
             onChange={e => handleChange("studyTitle", e.target.value)}
+            placeholder="Bachelor of Science"
           />
         </div>
 
         <div className="form-input">
           <label className="input-label">
-            Date of Graduation
+            Date of Graduation<span aria-label="required" className="grid-ignore">*</span>
           </label>
           <input
             name="graduationDate"
