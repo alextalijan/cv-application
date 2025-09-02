@@ -2,7 +2,7 @@ import Job from './Job.jsx';
 
 function ExperienceSection({ jobs, addJob, deleteJob, handleJobChange }) {
   return (
-    <div className='jobsList'>
+    <div className='jobs-list'>
      <h2 className='section-heading'>Experience</h2>
      {jobs.map((job) => {
       return (

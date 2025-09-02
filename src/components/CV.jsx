@@ -1,37 +1,43 @@
 function CV({ info, toggleEditMode }) {
   return (
-    <div className="finished-cv">
+    <div className="cv-paper">
       <button className="edit-cv-btn" onClick={toggleEditMode} type="button">EDIT</button>
+
       <section className="finished-cv-section">
         <h2>General</h2>
-        <p>Name: {info.name || 'Not known'}</p>
-        <p>Email: {info.email || 'Not provided'}</p>
-        <p>Phone Number: {info.phone || 'Not provided'}</p>
+        <p>Name: <b>{info.name || 'Not known'}</b></p>
+        <p>Email: <b>{info.email || 'Not provided'}</b></p>
+        <p>Phone Number: <b>{info.phone || 'Not provided'}</b></p>
       </section>
       <section className="finished-cv-section">
         <h2>Education</h2>
-        <p>School Name: {info.school || 'None'}</p>
+        <p>School Name: <b>{info.school || 'None'}</b></p>
         {info.school !== ''
           && <>
-              <p>Study Title: {info.studyTitle || 'None'}</p>
-              <p>Graduation Date: {info.graduationDate || 'None'}</p>
+              <p>Study Title: <b>{info.studyTitle || 'None'}</b></p>
+              <p>Graduation Date: <b>{info.graduationDate || 'None'}</b></p>
             </>}
       </section>
+
       <section className="finished-cv-section">
         <h2>Experience</h2>
-        {info.jobs.length > 0
-          ? info.jobs.map(job => {
-            return (
-              <div key={job.id}>
-                <h3>{job.company}</h3>
-                <p>Position (Title): {job.position}</p>
-                <p>Responsibilities: {job.responsibilities}</p>
-                <p>Worked from {job.fromDate} to {job.toDate}</p>
-              </div>
-            );
-          })
-          : <p>There are not any provided jobs.</p>}
+        <div className="finished-jobs-list">
+          {info.jobs.length > 0
+            ? info.jobs.map(job => {
+              return (
+                <div key={job.id} className="finished-job-section">
+                  <h3><i>{job.company || "Some Company"}</i></h3>
+                  <p>Position (Title): <b>{job.position || "Not defined"}</b></p>
+                  <p>Responsibilities: <b>{job.responsibilities || "Unknown"}</b></p>
+                  <p>Worked from <b>{job.fromDate || "some date"}</b> to <b>{job.toDate || "some other date"}</b>.</p>
+                </div>
+              );
+            })
+            : <p>There are not any provided jobs.</p>}
+        </div>
       </section>
+
+      <img className="cv-stamp" src="/stamp.png" alt="" />
     </div>
   );
 }

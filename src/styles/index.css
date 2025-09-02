@@ -28,6 +28,7 @@ body {
   background-image: url(../assets/paper-texture.jpg);
   background-size: contain;
   border-radius: 3px;
+  position: relative;
 }
 
 .section {
@@ -74,7 +75,7 @@ body {
   height: 0;          /* usually fine */
 }
 
-.jobsList {
+.jobs-list {
   display: flex;
   flex-direction: column;
   gap: 3rem;
@@ -154,4 +155,63 @@ body {
 .submitCV-btn:hover {
   cursor: pointer;
   background-color: lightgreen;
+}
+
+.edit-cv-btn {
+  align-self: end;
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  background-color: lightblue;
+  transition: background-color 0.5s;
+}
+
+.edit-cv-btn:hover {
+  background-color: aqua;
+  transition: background-color 0.5s;
+  cursor: pointer;
+}
+
+.finished-jobs-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.finished-cv-section {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.finished-cv-section > h2 {
+  font-size: 2.3rem;
+  margin-bottom: 1rem;
+}
+
+.finished-cv-section > p {
+  font-size: 1.2rem;
+}
+
+.finished-job-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.finished-job-section > h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.finished-job-section > p {
+  font-size: 1.2rem;
+}
+
+.cv-stamp {
+  width: 100px;
+  position: absolute;
+  bottom: 1rem;
+  right: 2rem;
 }
