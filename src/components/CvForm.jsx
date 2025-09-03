@@ -56,8 +56,8 @@ function CvForm() {
       errors += 1;
     }
 
-    if (info.graduationDate === '') {
-      showError('graduationDate', 'Please input the last school you attended.');
+    if (info.graduationDate === '' || new Date(info.graduationDate) > new Date()) {
+      showError('graduationDate', 'Please select a valid graduation date.');
       errors += 1;
     }
 
@@ -70,6 +70,13 @@ function CvForm() {
 
         if (job.responsibilities === '') {
           showError('responsibilities', 'Please describe what you have done at this job.', job.id);
+          errors += 1;
+        }
+
+        const workedFrom = new Date(job.workedFrom);
+        const workedUntil = new Date(job.workedUntil);
+        if (workedFrom >= workedUntil) {
+          showError('workedFrom', "You couldn't have started working before you ended.", job.id);
           errors += 1;
         }
       });
